@@ -11,6 +11,10 @@
     width: 100%;
     margin: 0% auto;
     font-family: 'Roboto', sans-serif;
+    height: 80px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     a{
         padding: 0px 5px;
         color: white;
