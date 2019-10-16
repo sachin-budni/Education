@@ -17,6 +17,8 @@ export class HomeComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(StudentFormComponent, {
       width: '500px',
+      maxHeight:"85vh",
+      height:"820px"
     });
 
     // dialogRef.afterClosed().subscribe(result => {

@@ -9,20 +9,20 @@
         <button mat-menu-item>About</button>
         <button mat-menu-item>Service</button>
         <button mat-menu-item>Portfolio</button>
-        <button mat-menu-item>Contact</button>
+        <button mat-menu-item >Contact</button>
       </mat-menu>
       <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="10px" fxHide.sm fxHide.xs>
         <a href="">About</a>
         <a href="">Service</a>
         <a href="">Portfolio</a>
-        <a href="">Contact</a>
+        <a (click)="openDialog()">Contact</a>
       </div>
     </div>
       <div class="main-sub" fxLayout="column" fxLayoutAlign="center center">
         <h1>YOUR FAVORITE SOURCE OF FREE BOOTSTRAP THEMES</h1>
         <hr/>
         <p>Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
-        <button mat-button (click)="openDialog()">FIND OUT MORE</button>
+        <button mat-button>FIND OUT MORE</button>
       </div>
   </div>
   

@@ -4,15 +4,18 @@ input.example-right-align::-webkit-inner-spin-button {
 }
 
 .form-main-div{
-    text-align: center;
+    // text-align: center;
     h1{
         font-size: 40px;
         font-family: 'Poppins', sans-serif;
+        text-align: center;
+        
     }
     p{
         font-size: 20px;
         font-family: 'Poppins', sans-serif;
         color: #6c6c6c;
+        text-align: center;
     }
 }
 
@@ -38,6 +41,11 @@ input.example-right-align::-webkit-inner-spin-button {
   @media screen and (max-width: 600px) {
     h1{
         font-size: 0.8em;
+    }
+    .form-main-div{
+        h1{
+            font-size: 30px !important;
+        }
     }
     p{
         font-size: 12px !important;
