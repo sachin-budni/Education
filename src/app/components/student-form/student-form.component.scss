@@ -1,0 +1,61 @@
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+.form-main-div{
+    text-align: center;
+    h1{
+        font-size: 40px;
+        font-family: 'Poppins', sans-serif;
+    }
+    p{
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
+        color: #6c6c6c;
+    }
+}
+
+.example-button{
+    width: 70px;
+    height: 70px;
+    .example-icon{
+        font-size: 45px !important;
+        width: 40px !important;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    h1{
+        font-size: 1em;
+    }
+    p{
+        font-size: 1em !important;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    h1{
+        font-size: 0.8em;
+    }
+    p{
+        font-size: 12px !important;
+    }
+  }
+
+  .file-upload{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    button{
+        border: 2px solid #b5b4b466;
+    }
+  }
+  .file-upload input[type=file]{
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }

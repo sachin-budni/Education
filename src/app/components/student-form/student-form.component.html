@@ -1,0 +1,69 @@
+<div class="form-main-div">
+    <h1>Get In touch</h1>
+    <p>Stop wasting time and money designing and managing a website that doesn't get results. Happiness guaranteed! </p>
+    <form [formGroup]="educationFormGroup" (ngSubmit)="onSubmit(educationFormGroup.value)"
+    fxLayout="column" fxLayoutAlign="space-between stretch">
+        
+        <mat-form-field appearance="outline">
+            <input matInput formControlName="fullName" placeholder="Full Name">
+            <mat-error *ngIf="!educationFormGroup.controls['fullName'].valid && educationFormGroup.controls['fullName'].touched">
+                Full Name is required
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <input matInput formControlName="quelification" placeholder="Qualification">
+            <mat-error *ngIf="!educationFormGroup.controls['quelification'].valid && educationFormGroup.controls['quelification'].touched">
+                Qualification is required
+            </mat-error>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline">
+            <input matInput formControlName="email" placeholder="Email Address">
+            <mat-error *ngIf="!educationFormGroup.controls['email'].valid && educationFormGroup.controls['email'].touched">
+                {{educationFormGroup.controls["email"].hasError("required")?"Email is required":"Enter valid Email Address"}}
+            </mat-error>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline">
+            <input matInput formControlName="phone" type="number" placeholder="Phone Number" maxlength="10" class="example-right-align">
+            <mat-error *ngIf="!educationFormGroup.controls['phone'].valid && educationFormGroup.controls['phone'].touched">
+                {{ educationFormGroup.controls["phone"].hasError("required")?"Phone Number is required":"Enter valid Phone Number" }}
+            </mat-error>
+        </mat-form-field>
+        
+        <div fxLayout="row" fxLayoutAlign="space-between stretch">
+            <mat-label>Resume :</mat-label>
+            <div class="file-upload">
+                <button mat-raised-button>
+                    <mat-icon>file_upload</mat-icon>upload
+                </button>
+                <input type="file" (change)="onChange($event,'resume')">
+            </div>
+        </div>
+
+        <div style="padding: 10px;"></div>
+        
+        <div fxLayout="row" fxLayoutAlign="space-between stretch">
+            <mat-label>Last Education certificate :</mat-label>
+            <div class="file-upload">
+                <button mat-raised-button>
+                    <mat-icon>file_upload</mat-icon>upload
+                </button>
+                <input type="file" (change)="onChange($event,'qualification')">
+            </div>
+        </div>
+        <!-- <div style="padding: 10px;"></div>
+        <div *ngIf="percentage | async">
+            <mat-progress-bar mode="determinate" [value]="percentage | async"></mat-progress-bar>
+        </div> -->
+        <div style="padding: 10px;"></div>
+        
+        <div fxLayout="row" fxLayoutAlign="end end">
+            <button mat-icon-button mat-raised-button type="submit" [disabled]="!educationFormGroup.valid" color="primary" class="example-button">
+            <mat-icon class="example-icon">keyboard_arrow_right</mat-icon>
+        </button>
+        </div>
+
+    </form>
+</div>
