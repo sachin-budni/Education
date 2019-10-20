@@ -1,93 +1,99 @@
+<div class="header-div">
+  <div class="header" fxLayout="row" fxLayoutAlign="space-between center">
+    <h1>Griva</h1>
+    <div fxFlex></div>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" fxHide="true"
+      fxHide.sm="false" fxHide.xs="false">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>About</button>
+      <button mat-menu-item>Service</button>
+      <button mat-menu-item>Portfolio</button>
+      <button mat-menu-item (click)="openDialog()">Contact</button>
+    </mat-menu>
+    <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="10px" fxHide.sm fxHide.xs>
+      <a href="#about">About</a>
+      <a href="#services">Service</a>
+      <a href="">Portfolio</a>
+      <a (click)="openDialog()">Contact</a>
+    </div>
+  </div>
+</div>
+
 <div class="main-header">
-    <div class="header" fxLayout="row" fxLayoutAlign="space-between center">
-      <!-- <h1>Griva</h1> -->
-      <h1>GRIVA</h1>
-      <div fxFlex></div>
-      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" fxHide="true" fxHide.sm="false" fxHide.xs="false">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>About</button>
-        <button mat-menu-item>Service</button>
-        <button mat-menu-item>Portfolio</button>
-        <button mat-menu-item (click)="openDialog()">Contact</button>
-      </mat-menu>
-      <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="10px" fxHide.sm fxHide.xs>
-        <a href="#about">About</a>
-        <a href="#services">Service</a>
-        <a href="">Portfolio</a>
-        <a (click)="openDialog()">Contact</a>
-      </div>
-    </div>
-      <div class="main-sub" fxLayout="column" fxLayoutAlign="center center">
-        <h1>FAST TRACK YOUR TECH CAREER</h1>
-        <hr/>
-        <p>Corporate culture based classrooms with one-on-one mentoring, Griva residential school is a 5 months intensive training program to kickstart your tech career.</p>
-        <a href="#about">
-          <button mat-button>FIND OUT MORE</button>
-        </a>
-      </div>
+  <div class="main-sub" fxLayout="column" fxLayoutAlign="center center">
+    <h1>FAST TRACK YOUR TECH CAREER</h1>
+    <hr />
+    <p>Corporate culture based classrooms with one-on-one mentoring, Griva residential school is a 5 months intensive
+      training program to kickstart your tech career.</p>
+    <a href="#about">
+      <button mat-button>FIND OUT MORE</button>
+    </a>
   </div>
-  
-  <div class="second-main" id="about">
-    <div fxLayout="column" fxLayoutAlign="center center" class="sub-second-main">
-      <h3>What is Griva?</h3>
-      <hr />
-      <p>Corporate culture based classrooms with one-on-one mentoring, Griva residential school is a 5 months intensive training program to kickstart your tech career.</p>
-      <button mat-button>GET STARTED!</button>
-    </div>
+</div>
+
+<div class="second-main" id="about">
+  <div fxLayout="column" fxLayoutAlign="center center" class="sub-second-main">
+    <h3>What is Griva?</h3>
+    <hr />
+    <p>Corporate culture based classrooms with one-on-one mentoring, Griva residential school is a 5 months intensive
+      training program to kickstart your tech career.</p>
+    <button mat-button>GET STARTED!</button>
   </div>
-  
-  <div class="three-main" id="services">
-    <div fxLayout="column" fxLayoutAlign="center center" class="sub-main">
-      <h3>At Your Service</h3>
-      <hr />
-      <div class="items-main">
-        <div fxLayout="column" fxLayoutAlign="center center">
-          <i class="fas fa-4x fa-gem text-primary mb-4"></i>
-          <h3>Sturdy Themes</h3>
-          <p>Become a Full-stack JS developer</p>
-        </div>
-        <div fxLayout="column" fxLayoutAlign="center center">
-            <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
-          <h3>Up to Date</h3>
-          <p>Teaching and mentoring by industry experts</p>
-        </div>
-        <div fxLayout="column" fxLayoutAlign="center center">
-            <i class="fas fa-4x fa-globe text-primary mb-4"></i>
-          <h3>Ready to Publish</h3>
-          <p>Stay and food inclusive fees</p>
-        </div>
-        <div fxLayout="column" fxLayoutAlign="center center">
-            <i class="fas fa-4x fa-heart text-primary mb-4"></i>
-          <h3>Made with Love</h3>
-          <p>24*7 access to classrooms</p>
-        </div>
+</div>
+
+<div class="three-main" id="services">
+  <div fxLayout="column" fxLayoutAlign="center center" class="sub-main">
+    <h3>At Your Service</h3>
+    <hr />
+    <div class="items-main">
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <i class="fas fa-4x fa-gem text-primary mb-4"></i>
+        <h3>Sturdy Themes</h3>
+        <p>Become a Full-stack JS developer</p>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
+        <h3>Up to Date</h3>
+        <p>Teaching and mentoring by industry experts</p>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <i class="fas fa-4x fa-globe text-primary mb-4"></i>
+        <h3>Ready to Publish</h3>
+        <p>Stay and food inclusive fees</p>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <i class="fas fa-4x fa-heart text-primary mb-4"></i>
+        <h3>Made with Love</h3>
+        <p>24*7 access to classrooms</p>
       </div>
     </div>
   </div>
-  
-  <div class="download-section">
-    <div class="h1-button" fxLayout="column" fxLayoutAlign="center center">
-      <h1>Free Download at Start Bootstrap!</h1>
-      <button mat-button>DOWNLOAD NOW!</button>
-    </div>
+</div>
+
+<div class="download-section">
+  <div class="h1-button" fxLayout="column" fxLayoutAlign="center center">
+    <h1>Free Download at Start Bootstrap!</h1>
+    <button mat-button>DOWNLOAD NOW!</button>
   </div>
-  
-  <div class="contact-section">
-    <div fxLayout="column" fxLayoutAlign="center center" class="last-div">
-      <h1>Let's Get In Touch!</h1>
-      <hr />
-      <p>Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
-      <div class="contact-items">
-        <div>
-            <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-            <p>+1 (202) 555-0149</p>
-        </div>
-        <div>
-            <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-            <p>contact@yourwebsite.com</p>
-        </div>
+</div>
+
+<div class="contact-section">
+  <div fxLayout="column" fxLayoutAlign="center center" class="last-div">
+    <h1>Let's Get In Touch!</h1>
+    <hr />
+    <p>Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon
+      as possible!</p>
+    <div class="contact-items">
+      <div>
+        <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+        <p>+1 (202) 555-0149</p>
+      </div>
+      <div>
+        <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+        <p>contact@yourwebsite.com</p>
       </div>
     </div>
   </div>
+</div>

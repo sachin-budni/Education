@@ -6,14 +6,21 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.header-div{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    place-content: center;
+}
 .header{
     max-width: 1200px;
     width: 100%;
     margin: 0% auto;
+    color: white;
     font-family: 'Roboto', sans-serif;
     height: 80px;
     position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
     a{
         padding: 0px 5px;
