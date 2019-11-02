@@ -11,12 +11,14 @@
       <button mat-menu-item>Service</button>
       <button mat-menu-item>Portfolio</button>
       <button mat-menu-item (click)="openDialog()">Contact</button>
+      <button mat-menu-item routerLink="blog">Blog</button>
     </mat-menu>
     <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="10px" fxHide.sm fxHide.xs>
       <a href="#about">About</a>
       <a href="#services">Service</a>
       <a href="">Portfolio</a>
       <a (click)="openDialog()">Contact</a>
+      <a routerLink="blog">Blog</a>
     </div>
   </div>
 </div>
@@ -25,15 +27,14 @@
   <div class="main-sub" fxLayout="column" fxLayoutAlign="center center">
     <h1>FAST TRACK YOUR TECH CAREER</h1>
     <hr />
-    <p>Corporate culture based classrooms with one-on-one mentoring, Griva residential school is a 5 months intensive
-      training program to kickstart your tech career.</p>
+    <p>Griva School of Coding is a 3 months intensive training program to kickstart your tech career. One-on-one mentoring and training by experienced, working professionals from top IT companies in the world.</p>
     <a href="#about">
       <button mat-button>FIND OUT MORE</button>
     </a>
   </div>
 </div>
 
-<div class="second-main" id="about">
+<!-- <div class="second-main" id="about">
   <div fxLayout="column" fxLayoutAlign="center center" class="sub-second-main">
     <h3>What is Griva?</h3>
     <hr />
@@ -41,41 +42,58 @@
       training program to kickstart your tech career.</p>
     <button mat-button>GET STARTED!</button>
   </div>
-</div>
+</div> -->
 
 <div class="three-main" id="services">
   <div fxLayout="column" fxLayoutAlign="center center" class="sub-main">
-    <h3>At Your Service</h3>
+    <h3>What is Griva?</h3>
     <hr />
     <div class="items-main">
       <div fxLayout="column" fxLayoutAlign="center center">
         <i class="fas fa-4x fa-gem text-primary mb-4"></i>
-        <h3>Sturdy Themes</h3>
-        <p>Become a Full-stack JS developer</p>
+        <!-- <h3>Sturdy Themes</h3> -->
+        <p>A Full-stack JS developer programming school</p>
       </div>
       <div fxLayout="column" fxLayoutAlign="center center">
         <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
-        <h3>Up to Date</h3>
+        <!-- <h3>Up to Date</h3> -->
         <p>Teaching and mentoring by industry experts</p>
       </div>
       <div fxLayout="column" fxLayoutAlign="center center">
         <i class="fas fa-4x fa-globe text-primary mb-4"></i>
-        <h3>Ready to Publish</h3>
-        <p>Stay and food inclusive fees</p>
+        <!-- <h3>Ready to Publish</h3> -->
+        <p>Soft skill development +Mock Interviews</p>
       </div>
-      <div fxLayout="column" fxLayoutAlign="center center">
+      <!-- <div fxLayout="column" fxLayoutAlign="center center">
         <i class="fas fa-4x fa-heart text-primary mb-4"></i>
         <h3>Made with Love</h3>
         <p>24*7 access to classrooms</p>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
 
+
+<!-- 
 <div class="download-section">
   <div class="h1-button" fxLayout="column" fxLayoutAlign="center center">
     <h1>Free Download at Start Bootstrap!</h1>
     <button mat-button>DOWNLOAD NOW!</button>
+  </div>
+</div> -->
+
+<div class="table-section">
+  <div class="table-div" fxLayout="column" fxLayoutAlign="center center">
+    <h1>What are the plans?</h1>
+    <hr />
+
+    <table>
+      <tr *ngFor="let data of dataSource">
+        <td class="first-td">{{data.col1}}</td>
+        <td [innerHTML]="data.col2"></td>
+        <td [innerHTML]="data.col3"></td>
+      </tr>
+    </table>
   </div>
 </div>
 
@@ -87,12 +105,14 @@
       as possible!</p>
     <div class="contact-items">
       <div>
+        <h3>Call Now</h3>
         <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-        <p>+1 (202) 555-0149</p>
+        <p> 9972607894, 6360955505</p>
       </div>
       <div>
+        <h3>Email Id</h3>
         <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-        <p>contact@yourwebsite.com</p>
+        <p>hello@griva.in</p>
       </div>
     </div>
   </div>

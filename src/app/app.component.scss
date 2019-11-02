@@ -1,0 +1,30 @@
+
+.header-div{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    place-content: center;
+}
+.header{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0% auto;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    height: 80px;
+    // background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    a{
+        padding: 0px 5px;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        margin-right: 39px;
+        -webkit-transition: 2s ease;
+            transition: 2s ease;
+    }
+    h1{
+        padding-left: 10px;
+    }
+}

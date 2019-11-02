@@ -125,17 +125,23 @@ hr{
 .three-main{
     width: 100%;
     padding: 50px 0px;
+    background-color: #f4623a;
+    color: white;
     .sub-main
     {
         max-width: 1200px;
         width: 100%;
         margin:0% auto;
+        
         h3{
-            font-size: 25px;
+            // font-size: 25px;
+            font-size: 30px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
         }
         hr{
-            background-color: red;
-            margin: 40px 0px;
+            background-color: white;
+            margin: 0px 0px 40px 0px;
         }
         .items-main{
             display: flex;
@@ -145,11 +151,12 @@ hr{
             div{
                 max-width: 300px;
                 p{
-                    margin: 0px;
+                    // margin: 0px;
+                    font-size: 22px;
                     width: 90%;
                 }
                 i{
-                    color: #f4623a;
+                    color: white;
                 }
             }
         }
@@ -235,4 +242,39 @@ hr{
     p{
         font-size: 16px !important;
     }
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .table-section{
+      width: 100%;
+      padding: 30px 0px;
+    .table-div{
+        max-width: 1140px;
+        width: 100%;
+        margin: 0% auto;
+        hr{
+            background-color: red;
+            margin: 30px 0px;
+        }
+    }
+  }
+  td{
+    font-size: 16px;
+    border: 1px solid #dddddd;
+    text-align: start;
+    padding: 10px;
+    vertical-align: top;
+}
+.first-td{
+    position: sticky;
+}
+tr{
+    border-bottom: 1px;
+  }
+  table{
+    // box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    border-collapse: collapse;
   }
