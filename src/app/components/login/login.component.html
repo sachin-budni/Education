@@ -1,0 +1,60 @@
+<div class="login-page">
+    <div class="login-body" fxLayout.md="column" fxLayout.sm="column" fxLayout.xs="column"
+        fxLayoutAlign="center space-around start">
+        <mat-card>
+            <div style="padding: 25px;"></div>
+            <div class="login-content">
+
+                <mat-card-header>
+                    <mat-card-title class="hello">Hi Will-N!</mat-card-title>
+                    <mat-card-subtitle>Don't have an account? <a href="#" routerLink="/register">Sign up</a>
+                    </mat-card-subtitle>
+                </mat-card-header>
+
+                <form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit(loginFormGroup.value)" class="form">
+                    <label>Email *</label>
+                    <mat-form-field class="form-element" appearance="outline">
+                        <input matInput placeholder="Email" name="email" formControlName="email">
+                        <mat-error
+                            *ngIf="!loginFormGroup.controls['email'].valid && loginFormGroup.controls['email'].touched">
+                            {{ getErrorEmail('email') }}
+                        </mat-error>
+                    </mat-form-field>
+
+                    <label>Password *</label>
+                    <mat-form-field class="form-element" appearance="outline">
+                        <input matInput placeholder="Password" name="password" type="password"
+                            formControlName="password">
+                        <mat-error
+                            *ngIf="!loginFormGroup.controls['password'].valid && loginFormGroup.controls['password'].touched">
+                            {{ getErrorPassword() }}
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!-- <div class="forget-password">
+              <a (click)="resetPassword()">Forget Password</a>
+            </div> -->
+
+                    <div class="form-element">
+                        <button mat-raised-button type="submit" class="button"
+                            [disabled]="!loginFormGroup.valid">Login</button>
+                    </div>
+
+                </form>
+                <!-- <div class="or">
+              <hr/>
+              <div class="other-source">
+                <span>or connect with</span>
+              </div>
+          </div>
+          <div class="google-button">
+            <button mat-raised-button type="submit" class="google button" (click)="GoogleLogin()"> 
+              <img class="googleimage" src="assets/google.png" alt=" "> 
+              Sign In with Google
+            </button>
+          </div> -->
+            </div>
+            <div style="padding: 25px;"></div>
+        </mat-card>
+    </div>
+</div>

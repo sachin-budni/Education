@@ -17,13 +17,14 @@ import { MaterialModule } from '../material.module';
 import { QuillModule } from 'ngx-quill';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AuthGuard } from '../core/auth/auth.guard';
 
 const route :Routes = [
   { path:"blog",component:MainComponent,children:[
     { path:"",component:BlogComponent },
-    { path:"admin",component:BlogAdminComponent},
-    { path:"admin/:id",component:BlogAdminComponent},
-    { path:"adminview",component:AdminViewComponent},
+    { path:"admin",component:BlogAdminComponent,canActivate:[AuthGuard]},
+    { path:"admin/:id",component:BlogAdminComponent,canActivate:[AuthGuard]},
+    { path:"adminview",component:AdminViewComponent,canActivate:[AuthGuard]},
     { path:"category/:id",component:CategoryComponent },
     { path:":id",component:SingleComponent },
     { path:"**",redirectTo:'',pathMatch:"full"},
@@ -45,6 +46,6 @@ const route :Routes = [
   exports:[
     RouterModule
   ],
-  providers:[BlogService,AdminService]
+  providers:[BlogService,AdminService,AuthGuard]
 })
 export class BlogModule { }

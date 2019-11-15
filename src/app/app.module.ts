@@ -15,12 +15,19 @@ import { AngularFireDatabaseModule } from 'angularfire2/database'
 import { environment } from 'src/environments/environment';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { LoginComponent } from './components/login/login.component';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { RegisterComponent } from './components/register/register.component';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AuthService } from './core/auth/auth.service';
+import { AuthGuard } from './core/auth/auth.guard';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    StudentFormComponent
+    StudentFormComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -32,12 +39,14 @@ import { HttpClientModule } from '@angular/common/http';
     AngularFireModule.initializeApp(environment.config),
     AngularFireDatabaseModule,
     AngularFireStorageModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   entryComponents:[
     StudentFormComponent
   ],
-  providers: [StudentFormService],
+  providers: [StudentFormService,AuthService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
